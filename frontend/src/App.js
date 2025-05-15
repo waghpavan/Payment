@@ -9,7 +9,7 @@ function App() {
   const [resp2,setResp2] = React.useState(null);
   const createRazorpayOrder = async (amount) => {
     try {
-      const response = await axios.post("http://localhost:5000/order", {
+      const response = await axios.post("https://paymentbackend-9kir.onrender.com/order", {
         amount: amount,
         currency: "INR"
       });
@@ -24,7 +24,7 @@ function App() {
     e.preventDefault();
     const paymentId = e.target.paymentId.value;
     try {
-      const response = await axios.get(`http://localhost:5000/payment/${paymentId}`);
+      const response = await axios.get(`https://paymentbackend-9kir.onrender.com/${paymentId}`);
       setResponseState(response.data);
       console.log(response.data);
       setResp2(response.data);
