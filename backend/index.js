@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
 
 
 const instance = new Razorpay({
-    key_id: 'rzp_test_CwmzfpWtsGQ46b',
-    key_secret: 'uWeDP35GlGeeduUMVdrtitvF',
+    key_id: 'your_id',
+    key_secret: 'your_secert',
 });
 
 
